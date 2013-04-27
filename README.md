@@ -1,9 +1,7 @@
 kite-kindle4nt
 ==============
 
-Kite - customized for Kindle 4.1.1 Non Touch
-
-# Research
+### Research
 
 There are reports of different kinds of runlevels/init scripts at 
 
@@ -22,7 +20,7 @@ ln: /etc/rc5.d/S62kite: No such file or directory
 ln: /etc/rc3.d/K07kite: No such file or directory
 ```
 
-Thus the original kite scripts could fail only.
+Thus the original kite script could fail only.
 
 On the other hand, my Kindle from October 2012
 
@@ -30,12 +28,22 @@ On the other hand, my Kindle from October 2012
 Original System Software Version: 025-H3_yoshi-181303 Sat Jan 12 20:40:53 PST 2013
 ```
 
-includes all run levels 0-6.
+(after an update!) includes all run levels 0-6.
 
-## But what does not?
+### But what does not?
 
+1. /etc/rc3.d isn't not longer the default shutdown run level. 
+   It's /etc/rc6.d.
 
+2. Calling of 'kite' at '/etc/rc5.d/S62' is too early.
+   Kite depends on the DBus subsystem.
+   But the DBus subsystem has been invoked only just a moment ago.
+   (Maybe a concurrencies problem?)
 
+### Interim Solution
 
+The invocation was shifted from 'S62kite' to 'S81kite'.
 
+On the other side, when the call comes too late, you are expecting some artifacts on the boot screen.
 
+More of it tomorrow...
