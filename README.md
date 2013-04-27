@@ -13,8 +13,6 @@ There are reports of different kinds of runlevels/init scripts at
 
 Both posts were published at a time when runlevel 3 and 5 were missing:
 
-li {list-style-type: none;}
-
 &nbsp;&nbsp;ln: /etc/rc5.d/S62kite: No such file or directory
 &nbsp;&nbsp;ln: /etc/rc3.d/K07kite: No such file or directory
 
