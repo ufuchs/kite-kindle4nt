@@ -3,6 +3,8 @@ kite-kindle4nt
 
 Kite - customized for Kindle 4.1.1 Non Touch
 
+# Research
+
 There are reports of different kinds of runlevels/init scripts at 
 
 ```
@@ -21,6 +23,19 @@ ln: /etc/rc3.d/K07kite: No such file or directory
 ```
 
 Thus the original kite scripts could fail only.
+
+On the other hand, my Kindle from October 2012
+
+```
+Original System Software Version: 025-H3_yoshi-181303 Sat Jan 12 20:40:53 PST 2013
+```
+
+includes all run levels 0-6.
+
+## But what does not?
+
+
+
 
 
 
