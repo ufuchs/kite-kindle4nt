@@ -30,12 +30,14 @@ Original System Software Version: 025-H3_yoshi-181303 Sat Jan 12 20:40:53 PST 20
 
 (after an update!) includes all run levels 0-6.
 
+The version on the 'Settings' page shows 'Version: Kindle 4.1.1(181303 0025)'
+
 ### But what does not?
 
-1. /etc/rc3.d isn't not longer the default shutdown run level. 
+1. /etc/rc3.d is not longer the default shutdown run level. 
    It's /etc/rc6.d.
 
-2. Calling of 'kite' at '/etc/rc5.d/S62' is too early.
+2. The invocation of 'kite' at '/etc/rc5.d/S62' is too early.
    Kite depends on the DBus subsystem.
    But the DBus subsystem has been invoked only just a moment ago.
    (Maybe a concurrencies problem?)
@@ -46,4 +48,18 @@ The invocation was shifted from 'S62kite' to 'S81kite'.
 
 On the other side, when the call comes too late, you are expecting some artifacts on the boot screen.
 
-More of it tomorrow...
+_Note:_ 
+
+If a text file contains binary data like 'kite.sh', some text editors won't be  working correctly.
+
+'Sublime Text', Vim e.g. works fine, while the GEdit  fails completely.
+
+### Summary
+
+Look at the version number and then decide which option appears true for you.
+
+If your version number is less than 4.1.1, then followed the advice from the second website.
+
+If the version number is equal to 4.1.1, then tried my 'kite.sh'.
+
+To instantly install the script, use the usbNetwork.
