@@ -63,3 +63,9 @@ If your version number is less than 4.1.1, then followed the advice from the sec
 If the version number is equal to 4.1.1, then tried my 'kite.sh'.
 
 To instantly install the script, use the usbNetwork.
+
+PS :
+
+Kite comes from here:
+
+http://www.mobileread.com/forums/showthread.php?t=168270
